@@ -1,0 +1,23 @@
+<div class="results" ng-class="{active: vm.results.length > 0 || vm.noResults || vm.loading}">
+
+    <div class="page-loader" ng-if="vm.loading"></div>
+    <div class="items-container">
+        <div class="thumbs" ng-if="!vm.loading && vm.results.length > 0" >
+            <thumbnail-listing ng-repeat="item in vm.results" ng-class="{selected: $parent.vm.selected == item}"
+                       selected="vm.selected"
+                       close-thumb="vm.closeThumb()"
+                       open-thumb="vm.selectListing(item)"
+                       listing="item">
+            </thumbnail-listing>
+        </div>
+
+
+        <div class="no-results-error" ng-if="vm.noResults"> sorry, no results for this listing ...</div>
+
+        <div class="btns-wrapper" ng-if="!vm.loading && vm.results.length > 0">
+            <a class="btn" ng-click="vm.prev()">prev</a>
+            <span class="page-indicator">page {{vm.currentPage + 1}}</span>
+            <a class="btn" ng-click="vm.next()">next</a>
+        </div>
+    </div>
+</div>

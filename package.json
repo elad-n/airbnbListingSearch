@@ -1,0 +1,22 @@
+{
+  "name": "air-bnb-listing-app",
+  "version": "1.0.0",
+  "description": "allows you to search for listings ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elad-n/airbnbListingSearch.git"
+  },
+  "author": "Elad Noty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elad-n/airbnbListingSearch/issues"
+  },
+  "homepage": "https://github.com/elad-n/airbnbListingSearch#readme",
+  "dependencies": {
+    "ngtouch": "^1.0.1"
+  }
+}

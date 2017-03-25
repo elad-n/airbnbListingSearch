@@ -1,0 +1,12 @@
+<div class="header-container">
+    <div class="logo">
+        <img src="imgs/logo.jpeg" alt="">
+    </div>
+
+    <ui-select ng-model="vm.selectedValue" theme="selectize" title="Choose a city">
+        <ui-select-match placeholder="Select a city in the list...">{{vm.selectedValue}}</ui-select-match>
+        <ui-select-choices repeat="city in vm.cities">
+            <span ng-bind-html="city | highlight: $select.search"></span>
+        </ui-select-choices>
+    </ui-select>
+</div>

@@ -1,0 +1,15 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  -webkit-align-items: center;
+  min-height: 20em;
+
+.logo {
+    text-align: center;
+    height: 130px;
+  }
+}

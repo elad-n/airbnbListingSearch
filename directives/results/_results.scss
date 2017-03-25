@@ -1,0 +1,36 @@
+.results {
+  overflow: auto;
+  transition: all 0.5s;
+  flex: 0;
+  width: 100%;
+
+  &.active {
+    flex: 1;
+  }
+
+  .items-container {
+    margin-bottom: 20px;
+    .thumbs {
+      text-align: center;
+    }
+
+    .btns-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      .btn {
+        width: 100px;
+        padding: 14px;
+      }
+      .page-indicator {
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .no-results-error {
+    text-align: center;
+  }
+}

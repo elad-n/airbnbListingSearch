@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AirBnb listing search</title>
+
+    <!--JS libs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="node_modules/ui-select/dist/select.js"></script>
+    <script src="node_modules/ngtouch/build/ngTouch.min.js"></script>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/mrmrs/btns/dbbfe61b/css/btns.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link rel="stylesheet" href="node_modules/ui-select/dist/select.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app-container" ng-controller="mainCtrl">
+    <listing-search></listing-search>
+    <results></results>
+</div>
+
+<script src="app.js"></script>
+<!--services-->
+<script src="js/services/listing.service.js"></script>
+<!--controllers-->
+<script src="js/controllers/mainCtrl.js"></script>
+
+<!--directives-->
+<script src="directives/listingSearch/listingSearch.drv.js"></script>
+<script src="directives/thumbnailListing/thumbnailListing.drv.js"></script>
+<script src="directives/results/results.drv.js"></script>
+<script src="directives/review/review.drv.js"></script>
+</body>
+</html>

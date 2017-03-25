@@ -1,0 +1,32 @@
+<div class="thumbnail-container">
+    <div class="small-info" ng-click="openThumb()">
+        <div class="poster" ng-style="{'background-image': 'url('+vm.listing.thumbnail_url+')'}"></div>
+        <div class="title">
+            {{vm.listing.name}}
+            <div class="sub-title">{{vm.listing.public_address}} , {{vm.listing.neighborhood}}</div>
+        </div>
+
+    </div>
+
+    <div class="expanded" ng-if="!loading">
+        <div class="top-bar">
+            <button class="back-btn" ng-click="closeThumb()">< Back</button>
+            <h3>{{vm.listing.name}}</h3>
+        </div>
+        <div class="info">
+            <div class="thumb">
+                <h3>{{vm.listing.public_address}} , {{vm.listing.neighborhood}}</h3>
+
+                <div id="slides_control" uib-carousel interval="vm.myInterval" active="vm.active">
+                    <div uib-slide ng-repeat="slide in vm.listing.picture_urls track by $index" index="$index">
+                        <img ng-src="{{slide}}">
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <review class="review" ng-repeat="review in vm.reviews" review-data="review"></review>
+                <div ng-if="vm.noResults">Sorry, there is no reviews for this listing..</div>
+            </div>
+        </div>
+    </div>
+</div>

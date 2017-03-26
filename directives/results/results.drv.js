@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('directives.results', [])
     .directive('results', results);
 
@@ -7,14 +9,12 @@ function results() {
         restrict: 'E',
         templateUrl: 'directives/results/results.tpl.html',
         controller: controller,
-        controllerAs: 'vm',
-        scope: {}
+        controllerAs: 'vm'
     };
 
     return directive;
 
     function controller($scope, listSrv) {
-        'use strict';
 
         var vm = this;
         var selectedCity = null;

@@ -26,6 +26,7 @@
             <div class="details">
                 <review class="review" ng-repeat="review in vm.reviews" review-data="review"></review>
                 <div ng-if="vm.noResults">Sorry, there is no reviews for this listing..</div>
+                <div ng-if="vm.noResults">Sorry, seems that we have a server errors, please try again later ..</div>
             </div>
         </div>
     </div>

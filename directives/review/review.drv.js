@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('directives.review', [])
     .directive('review', reviews);
 
@@ -17,8 +19,5 @@ function reviews() {
 
     return directive;
 
-    function link(scope, element, attrs, ctrl) {
-        'use strict';
-
-    }
+    function link(scope, element, attrs, ctrl) {}
 }

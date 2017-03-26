@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('directives.listingSearch', [])
     .directive('listingSearch', listingSearch);
 
@@ -14,7 +16,6 @@ function listingSearch() {
     return directive;
 
     function controller($scope, $element, $rootScope) {
-        'use strict';
         var vm = this;
 
         function init() {

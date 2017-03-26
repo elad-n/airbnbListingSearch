@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('directives.thumbnailListing', [])
     .directive('thumbnailListing', thumbnailListing);
 
@@ -19,7 +21,6 @@ function thumbnailListing() {
     return directive;
 
     function controller($scope, $attrs, $element, listSrv) {
-        'use strict';
         var vm = this;
 
         $scope.$watch('selected', function (val) {
@@ -45,12 +46,13 @@ function thumbnailListing() {
                     vm.loading = false;
                 }, function (err) {
                     console.log(err);
-                    vm.noResults = true;
                     vm.loading = false;
+                    vm.error = true;
                 })
         }
 
         function init() {
+            vm.error = false;
             vm.myInterval = 3000;
             vm.listing = $scope.listing.listing;
             vm.loading = false;

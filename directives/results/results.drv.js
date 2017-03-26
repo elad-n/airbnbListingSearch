@@ -20,26 +20,29 @@ function results() {
         var selectedCity = null;
 
         function init() {
+            vm.error = false;
             vm.expanded = false;
             vm.active = false;
             vm.currentPage = 0;
+            vm.noResults = false;
+
         }
 
         function searchListing(value, offset) {
             if (value) {
                 vm.results = [];
                 vm.loading = true;
-                vm.noResults = false;
-
                 listSrv.getListingsByCity(value, offset)
                     .then(function (results) {
                         vm.results = results.data.search_results;
                         vm.loading = false;
+                        angular.element('.results')[0].scrollTop = 0;
                         if (!_.size(vm.results)) {
                             vm.noResults = true;
                         }
                     }, function (err) {
                         vm.noResults = false;
+                        vm.error = true;
                         console.log(err);
                     });
             }

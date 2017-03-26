@@ -13,6 +13,7 @@
 
 
         <div class="no-results-error" ng-if="vm.noResults"> sorry, no results for this listing ...</div>
+        <div class="no-results-error" ng-if="vm.error"> Error, please try again </div>
 
         <div class="btns-wrapper" ng-if="!vm.loading && vm.results.length > 0">
             <a class="btn" ng-click="vm.prev()">prev</a>
